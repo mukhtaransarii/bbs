@@ -8,7 +8,7 @@ barBtn.addEventListener("click",function(){
     barBtn.classList.replace("ri-menu-3-line", "ri-close-line");
     clickTime = 1;
     }else{
-    leftbar.style.right = "-100%";
+    leftbar.style.right = "-200%";
     barBtn.classList.replace("ri-close-line" , "ri-menu-3-line");
     clickTime = 0;
     }
@@ -25,7 +25,7 @@ let projectScreen = document.querySelector(".project")
 let lessonScreen = document.querySelector(".lesson")
 
  portfolioBtn.addEventListener("click",function(){
-  leftbar.style.right = "-100%";
+  leftbar.style.right = "-200%";
   barBtn.classList.replace("ri-close-line" , "ri-menu-3-line");
   portfolioScreen.style.display = "block"
   projectScreen.style.display = "none"
@@ -33,7 +33,7 @@ let lessonScreen = document.querySelector(".lesson")
  })
 
  projectBtn.addEventListener("click",function(){
-  leftbar.style.right = "-100%";
+  leftbar.style.right = "-200%";
   barBtn.classList.replace("ri-close-line" , "ri-menu-3-line");
   portfolioScreen.style.display = "none"
   projectScreen.style.display = "block"
@@ -41,7 +41,7 @@ let lessonScreen = document.querySelector(".lesson")
  })
 
  lessonBtn.addEventListener("click",function(){
-  leftbar.style.right = "-100%";
+  leftbar.style.right = "-200%";
   barBtn.classList.replace("ri-close-line" , "ri-menu-3-line");
   portfolioScreen.style.display = "none"
   projectScreen.style.display = "none"
@@ -64,7 +64,7 @@ msgAdmin.addEventListener("click",function(){
   msgSubject.value = ""
   msgTextArea.value = ""
   right.style.right = "0"
-  leftbar.style.right = "-100%";
+  leftbar.style.right = "-200%";
   barBtn.classList.replace("ri-close-line" , "ri-menu-3-line");
   document.querySelector(".ri-arrow-left-line").style.display = "block"
   loginPage.style.display = "none"
@@ -73,7 +73,7 @@ msgAdmin.addEventListener("click",function(){
   msgPage.style.flexDirection = "column"
 })
 document.querySelector(".ri-arrow-left-line").addEventListener("click",function(){
-    right.style.right = "-100%"
+    right.style.right = "-200%"
     msgPage.style.display = "flex"
     msgPage.style.flexDirection = "column"
 })
@@ -90,7 +90,7 @@ document.querySelector(".ri-arrow-left-line").addEventListener("click",function(
    if( msgName.length == 0 || msgPhone.length == 0 || msgSubject.length == 0 || msgTextArea.length == 0){
     swal("ERROR", "Please fill Every Details", "error");
    }else{
-    right.style.right = "-100%"
+    right.style.right = "-200%"
     Email.send({
     SecureToken : "925d1fee-c803-4d93-a09c-c79ad4da638f",
     To : 'mukhtar.alam458546@gmail.com',
@@ -117,7 +117,7 @@ setTimeout( function loginFn(){
   loginPage.style.display = "block"
   loginPage.style.display = "flex"
   loginPage.style.flexDirection = "column"
-},500)
+},1000)
 
 //Get data from user Login Page
 let LOGINBTN = document.querySelector("#loginBtn")
@@ -130,7 +130,7 @@ let LOGINBTN = document.querySelector("#loginBtn")
     swal("ERROR", "Please fill Every Details", "error");
    }else{
     document.querySelector("nav .ri-menu-3-line").style.display = "block"
-    right.style.right = "-100%"
+    right.style.right = "-200%"
     document.querySelector("#username").innerHTML = `<i class="ri-account-circle-line"></i>` + msgName;
     Email.send({
     SecureToken : "925d1fee-c803-4d93-a09c-c79ad4da638f",
@@ -149,7 +149,7 @@ let LOGINBTN = document.querySelector("#loginBtn")
 let logoutBtn = document.querySelector("#logoutBtn")
  logoutBtn.addEventListener("click",function(){
     document.querySelector("#username").innerHTML = `<i class="ri-account-circle-line"></i>` + "Username";
-    leftbar.style.right = "-100%";
+    leftbar.style.right = "-200%";
     barBtn.classList.replace("ri-close-line" , "ri-menu-3-line");
  
   //Call setTimeout Function 

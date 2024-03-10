@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Manrope", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 body{
   height: 100vh;
   width: 100vw;
-  background-color: #EEF1F6;
+  background-color: #fff;
 }
 
 /*NAV*/
@@ -118,7 +122,6 @@ nav i{
 .navv{
   background-color: #1E56FF;
   color: white;
-  height: 100px;
   font-size: 2vw;
   display: flex;
   flex-direction: column;
@@ -151,15 +154,16 @@ nav i{
   font-size: 15px;
 }
 .portfolio .content{
-  margin-top: 8%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row-reverse;
+  margin-top: 10vh;
 }
 .portfolio .nameArea{
   font-size: 3vw;
   padding-top: 90px;
+  width: 85%;
 }
 .portfolio .nameArea #profession{
   font-size: 2vw;
@@ -168,41 +172,12 @@ nav i{
   color: black;
   font-size: 3vw;
 }
-.portfolio .nameArea p{
+.portfolio .nameArea #bio{
   font-size: 1.5vw;
 }
-.portfolio .smIcons{
-  font-size: 2vw;
-  margin-top: 20px;
-}
-.portfolio .smIcons .fa-instagram{
- background: linear-gradient(135deg,#feda75, #fa7e1e,#d62976,#962fbf); 
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
- font-size: 20px;
-}
 
-.portfolio .smIcons .fa-telegram{
-  color: #24a1de;
-  font-size: 20px;
-}
-.portfolio .smIcons .fa-youtube{
-  color: #e62117;
-  font-size: 20px;
-}
-.portfolio .smbox{
-  display: flex;
-  align-items: center;
-  margin: 5px 0px;
-}
-.portfolio .smbox p{
-  font-size: 1.2vw;
-  margin-left: 5px;
-  color: #4d4d4d;
-  font-weight: 600;
-}
 .portfolio #profilePic{
-  width: 500px;
+  width: 40%;
 }
 
 /*    MIDBAR/PROJECT     */
@@ -221,34 +196,52 @@ ul{
 }
  ul li{
   font-family: "Nunito", sans-serif;
-  margin: 20px 20px;
-  padding: 10px 20px;
-  background: #ffffff; 
-  box-shadow: -2px 2px 5px 0px #0000001c;
-  border-radius: 15px;
+  margin-bottom: 30px;
+  padding: 20px 20px;
+  background: #fff; 
+/*   box-shadow: -2px 2px 5px 0px #0000001c; */
+  /* border-radius: 15px; */
   list-style: none;
 }
- h2{
-  margin: 0;
-  font-weight: 550;
-  color: black;
-  font-size: 22px;
+ul li img{
+  width: 50%;
+  margin-bottom: 10px; 
+  border-radius: 8px;
+  box-shadow: 0px 3px 5px #0000001c;
 }
-.project, .lesson h5{
-  font-size: 13px;
+
+#des{
+  /* background-color: lightblue; */
+}
+ul li h2{
+  color: #8a8a8a;
+  font-size: 20px;
   font-weight: 500;
-  color: #333738;
 }
-.project, .lesson p , a, span{
-  font-size: 12px;
-  color: grey;
+ul li #Pname{ 
+/*   margin-bottom: 2px; */
+  font-size: 35px;
+  color: #161616;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
 }
-.project, .lesson ul li h2,h5,p,a{
-  margin: 4px 0px;
+ul li span{
+  font-size: 20px;
+  font-weight: 400;
 }
- a{
+ul li a{ 
+  font-size: 20px;
   text-decoration: none;
-  color: #1E56FF;
+  font-weight: bold;
+  color: #4286f4;
+  font-weight: 500;
+}
+ul li #iibbs{
+  margin-top: 5px;
+}
+ul li mark{
+  background-color: transparent;
+  color: #333738;
 }
 
 /*    MIDBAR/LESSON    */
@@ -264,7 +257,7 @@ ul{
 .rightbar{
   position: absolute;
   top: 50%;
-  right: -100%;
+  right: -200%;
   transform: translateY(-50%);
   height: 100%;
   width: 600px;
@@ -342,7 +335,8 @@ textarea{
 }
 
 /* Responsive for Mobile */
-@media (max-width: 800px){
+@media (max-width: 700px){
+ 
    nav #logo{
    font-size: 25px;
    }
@@ -350,12 +344,23 @@ textarea{
    display: block;
    font-size: 20px;
    }
-  .midbar ul li h2{
-    font-size: 16px;
+  ul li img{
+  width: 100%;
   }
-  .midbar ul li p, span{
-    font-size: 10px;
+  ul li h2{
+    font-size: 12px;
   }
+  ul li #Pname{
+    font-size: 25px;
+  }
+  ul li span{
+    font-size: 12px;
+  }
+  ul li a{
+    font-size: 12px;
+  }
+  
+  
   .hero{
   flex-direction: row-reverse;
   white-space: nowrap;
@@ -364,14 +369,14 @@ textarea{
   }
   .leftbar{
    position: absolute;
-   right: -100%;
-   transition: 0.6s ease-in-out;
-   font-size: 13px;
-   z-index: 9999;
+   right: -200%;
+   transition: right 0.6s ease-in-out;
+   font-size: 18px;
+   z-index: 9999; 
   }
 
   .navv{
-    font-size: 15px;
+    font-size: 20px;
   }
   .navv #searchArea input{
     font-size: 12px;
@@ -379,30 +384,24 @@ textarea{
   .portfolio .content{
     flex-direction: column;
     justify-content: flex-start;
+    margin-top: 0vw;
   }
   .portfolio .nameArea{
     padding: 0;
   }
   .portfolio .nameArea #profession{
-  font-size: 3vw;
+  font-size: 5vw;
   }
   .portfolio .nameArea h2{
-    font-size: 5vw;
-  }
-  .portfolio .smIcons h5{
-    font-size: 3vw;
-  }
-  .nameArea .smbox p{
     font-size: 8vw;
-    margin-top: 10px;
   }
   
   .portfolio #profilePic{
-    width: 250px;
-    margin-bottom: 20px;
+    width: 80%;
+    margin-bottom: 50px;
     margin-top: 50px;
   }
-  .portfolio .nameArea p{
+  .portfolio .nameArea #bio{
   font-size: 10px;
   } 
   .navv{
